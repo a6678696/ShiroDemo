@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="/user/login" method="post" style="width: 40%;margin-left: 27%;margin-top: 8%">
+    <h1 style="text-align: center">登录</h1>
+    <div class="form-group">
+        <label for="userName">用户名</label>
+        <input type="text" id="userName" name="userName" class="form-control" th:value="${user==null?'':user.userName}">
+    </div>
+    <div class="form-group">
+        <label for="password">密码</label>
+        <input type="text" id="password" name="password" class="form-control" th:value="${user==null?'':user.password}">
+    </div>
+    <input type="submit" value="提交" class="btn btn-primary"><span style="color: red" th:text="${error}"></span>
+</form>
+</body>
+</html>

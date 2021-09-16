@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 style="text-align: center">首页</h1>
+<h4 style="text-align: center">
+    当前用户:<span th:text="${session.currentUser.nickName}"></span>
+</h4>
+<div style="text-align: center">
+    <a href="/logout"><button type="button" class="btn btn-danger">注销登录</button></a>
+    <a href="/user/addTeacher"><button type="button" class="btn btn-primary">添加教师</button></a>
+    <a href="/user/addStudent"><button type="button" class="btn btn-info">添加学生</button></a>
+</div>
+</body>
+</html>
